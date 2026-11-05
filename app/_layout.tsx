@@ -39,7 +39,7 @@ function RootLayoutContent() {
     // night mode follow the in-app theme lets Android pick light/dark
     // status & navigation bar icons without any deprecated Window API.
     if (Platform.OS !== "web") {
-      Appearance.setColorScheme(preference === "system" ? null : preference);
+      Appearance.setColorScheme(preference === "system" ? "unspecified" : preference);
     }
   }, [colors.background, preference]);
 
