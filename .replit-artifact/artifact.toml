@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/"
+title = "BizPilot - Small Business Manager"
+version = "1.0.0"
+id = "artifacts/bizpilot"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+name = "expo"
+paths = [ "/" ]
+localPort = 23145
+
+[services.development]
+run = "pnpm --filter @workspace/bizpilot run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/bizpilot", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/bizpilot", "run", "serve" ]
+
+[services.env]
+PORT = "23145"
+BASE_PATH = "/"

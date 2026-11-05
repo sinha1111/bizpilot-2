@@ -1,0 +1,75 @@
+{
+  "expo": {
+    "name": "BizPilot - Small Business Manager",
+    "slug": "bizpilot",
+    "version": "8.0.1",
+    "orientation": "default",
+    "icon": "./assets/images/icon.png",
+    "scheme": "bizpilot",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.tricosoft.bizpilot",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "BizPilot অ্যাপ আনলক করতে Face ID ব্যবহার করা হয়। আপনার ব্যবসার তথ্য সুরক্ষিত রাখতে এটি প্রয়োজন।"
+      }
+    },
+    "android": {
+      "package": "com.tricosoft.bizpilot",
+      "versionCode": 14,
+      "softwareKeyboardLayoutMode": "resize",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#4f46e5"
+      },
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.VIBRATE"
+      ],
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-web-browser",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "BizPilot অ্যাপ আনলক করতে Face ID ব্যবহার করা হয়। আপনার ব্যবসার তথ্য সুরক্ষিত রাখতে এটি প্রয়োজন।"
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableMinifyInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "extraProguardRules": "-keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod,RuntimeVisibleAnnotations\n-keep class com.swmansion.reanimated.** { *; }\n-keep class com.swmansion.worklets.** { *; }\n-keep class com.swmansion.gesturehandler.** { *; }\n-keep class com.swmansion.rnscreens.** { *; }\n-keep class com.th3rdwave.safeareacontext.** { *; }\n-keep class com.reactnativekeyboardcontroller.** { *; }\n-keep class com.reactnativecommunity.asyncstorage.** { *; }\n-keep class com.horcrux.svg.** { *; }\n-keep class com.facebook.react.turbomodule.** { *; }\n-keep class com.facebook.hermes.** { *; }\n-keep class com.facebook.jni.** { *; }\n-keep class expo.modules.** { *; }\n-dontwarn com.facebook.react.**\n-dontwarn expo.modules.**"
+          }
+        }
+      ],
+      "./plugins/withR8Optimize"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8b3c4b4e-85fa-4ecc-94d1-d9a0c63fb8df"
+      }
+    },
+    "owner": "tricosoft111"
+  }
+}
