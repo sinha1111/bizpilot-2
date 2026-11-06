@@ -16,7 +16,7 @@
     },
     "android": {
       "package": "com.tricosoft.bizpilot",
-      "versionCode": 14,
+      "versionCode": 18,
       "softwareKeyboardLayoutMode": "resize",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
